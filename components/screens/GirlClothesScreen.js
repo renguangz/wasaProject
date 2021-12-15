@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-const SettingScreen = () => {
+const GirlClothesScreen = () => {
     return (
         <View>
-            <Text>SettingScreen</Text>
+            <Text>GirlClothesScreen</Text>
         </View>
     )
 };
 
-export default SettingScreen;
+export default GirlClothesScreen;
