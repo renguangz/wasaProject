@@ -1,9 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
-import SettingScreen from './BoyClothesScreen';
-
-const Drawer = createDrawerNavigator();
 
 const CartScreen = () => {
     useEffect(() => {
