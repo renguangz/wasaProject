@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2E095C62C6C0E3BEA243C59B /* libPods-wasa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF233A2B042BAE6B01A786D3 /* libPods-wasa.a */; };
-		5AA6B6D17F6AEB2C137D1D43 /* libPods-wasa-wasaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C9EBED747862AF8051DD17 /* libPods-wasa-wasaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		87F3023E56C7E920A95EDE97 /* libPods-wasa-wasaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D05FF8861FD8A81301DFAF6 /* libPods-wasa-wasaTests.a */; };
+		903A86B4F0ABC294F3B3BE3B /* libPods-wasa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D02B459624ED958FE9851B4 /* libPods-wasa.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wasa/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wasa/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wasa/main.m; sourceTree = "<group>"; };
-		693FAF285BC9FB84098E3E3B /* Pods-wasa-wasaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa-wasaTests.debug.xcconfig"; path = "Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		72C9EBED747862AF8051DD17 /* libPods-wasa-wasaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa-wasaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D02B459624ED958FE9851B4 /* libPods-wasa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = wasa/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		860E0D82E969BEC124DF1BFD /* Pods-wasa-wasaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa-wasaTests.release.xcconfig"; path = "Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests.release.xcconfig"; sourceTree = "<group>"; };
-		B47C35B9E9E985ACC7B6A6C0 /* Pods-wasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa.release.xcconfig"; path = "Target Support Files/Pods-wasa/Pods-wasa.release.xcconfig"; sourceTree = "<group>"; };
-		DF233A2B042BAE6B01A786D3 /* libPods-wasa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E29697EF7726DD0C4ACEE442 /* Pods-wasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa.debug.xcconfig"; path = "Target Support Files/Pods-wasa/Pods-wasa.debug.xcconfig"; sourceTree = "<group>"; };
+		8260DCDAA5696A5BE9CBB5EC /* Pods-wasa-wasaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa-wasaTests.release.xcconfig"; path = "Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D05FF8861FD8A81301DFAF6 /* libPods-wasa-wasaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa-wasaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDA41650E3D9AC64895DEB6 /* Pods-wasa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa.release.xcconfig"; path = "Target Support Files/Pods-wasa/Pods-wasa.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F288EFDEC02AC866803D59AA /* Pods-wasa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa.debug.xcconfig"; path = "Target Support Files/Pods-wasa/Pods-wasa.debug.xcconfig"; sourceTree = "<group>"; };
+		F74814E425FA4EA5BE0488D0 /* Pods-wasa-wasaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa-wasaTests.debug.xcconfig"; path = "Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA6B6D17F6AEB2C137D1D43 /* libPods-wasa-wasaTests.a in Frameworks */,
+				87F3023E56C7E920A95EDE97 /* libPods-wasa-wasaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E095C62C6C0E3BEA243C59B /* libPods-wasa.a in Frameworks */,
+				903A86B4F0ABC294F3B3BE3B /* libPods-wasa.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,22 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				DF233A2B042BAE6B01A786D3 /* libPods-wasa.a */,
-				72C9EBED747862AF8051DD17 /* libPods-wasa-wasaTests.a */,
+				6D02B459624ED958FE9851B4 /* libPods-wasa.a */,
+				8D05FF8861FD8A81301DFAF6 /* libPods-wasa-wasaTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		44F14E23FC909CE1D8F16C7D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E29697EF7726DD0C4ACEE442 /* Pods-wasa.debug.xcconfig */,
-				B47C35B9E9E985ACC7B6A6C0 /* Pods-wasa.release.xcconfig */,
-				693FAF285BC9FB84098E3E3B /* Pods-wasa-wasaTests.debug.xcconfig */,
-				860E0D82E969BEC124DF1BFD /* Pods-wasa-wasaTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -133,7 +121,7 @@
 				00E356EF1AD99517003FC87E /* wasaTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				44F14E23FC909CE1D8F16C7D /* Pods */,
+				EA2273B9A127BAA3B484487E /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +137,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EA2273B9A127BAA3B484487E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F288EFDEC02AC866803D59AA /* Pods-wasa.debug.xcconfig */,
+				BBDA41650E3D9AC64895DEB6 /* Pods-wasa.release.xcconfig */,
+				F74814E425FA4EA5BE0488D0 /* Pods-wasa-wasaTests.debug.xcconfig */,
+				8260DCDAA5696A5BE9CBB5EC /* Pods-wasa-wasaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,12 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "wasaTests" */;
 			buildPhases = (
-				73A5E7D2E70BF8D65BFDA936 /* [CP] Check Pods Manifest.lock */,
+				CADBE9F2C87A6160D032AF6A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				BA40DF8BA69E041524FEA8ED /* [CP] Embed Pods Frameworks */,
-				FBA65B2856CC3E5F129B2C94 /* [CP] Copy Pods Resources */,
+				B184A119571B5525AF3AC98E /* [CP] Embed Pods Frameworks */,
+				CED4FC8389152CE87CC5712C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +177,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "wasa" */;
 			buildPhases = (
-				E2D57B20CA87556182E9A5D8 /* [CP] Check Pods Manifest.lock */,
+				06A5AB085AFDE6A2407AB2B6 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				014D048ABACDD9FF39DBD196 /* [CP] Embed Pods Frameworks */,
-				19BF876132D0BBF23FA32007 /* [CP] Copy Pods Resources */,
+				0E3AA8D41409F0BA6B010784 /* [CP] Embed Pods Frameworks */,
+				73E7083A4E3205499A4117F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,80 +265,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		014D048ABACDD9FF39DBD196 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		19BF876132D0BBF23FA32007 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73A5E7D2E70BF8D65BFDA936 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wasa-wasaTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA40DF8BA69E041524FEA8ED /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2D57B20CA87556182E9A5D8 /* [CP] Check Pods Manifest.lock */ = {
+		06A5AB085AFDE6A2407AB2B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,7 +287,80 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FBA65B2856CC3E5F129B2C94 /* [CP] Copy Pods Resources */ = {
+		0E3AA8D41409F0BA6B010784 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E7083A4E3205499A4117F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa/Pods-wasa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B184A119571B5525AF3AC98E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CADBE9F2C87A6160D032AF6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wasa-wasaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED4FC8389152CE87CC5712C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,7 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 693FAF285BC9FB84098E3E3B /* Pods-wasa-wasaTests.debug.xcconfig */;
+			baseConfigurationReference = F74814E425FA4EA5BE0488D0 /* Pods-wasa-wasaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +456,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 860E0D82E969BEC124DF1BFD /* Pods-wasa-wasaTests.release.xcconfig */;
+			baseConfigurationReference = 8260DCDAA5696A5BE9CBB5EC /* Pods-wasa-wasaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,7 +480,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E29697EF7726DD0C4ACEE442 /* Pods-wasa.debug.xcconfig */;
+			baseConfigurationReference = F288EFDEC02AC866803D59AA /* Pods-wasa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +506,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B47C35B9E9E985ACC7B6A6C0 /* Pods-wasa.release.xcconfig */;
+			baseConfigurationReference = BBDA41650E3D9AC64895DEB6 /* Pods-wasa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -561,6 +561,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -626,6 +627,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

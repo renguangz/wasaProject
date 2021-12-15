@@ -1,3 +1,5 @@
+import android.os.Bundle;
+@Override protected void onCreate(Bundle savedInstanceState) { super.onCreate(null); }
 package com.wasa;
 
 import com.facebook.react.ReactActivity;
