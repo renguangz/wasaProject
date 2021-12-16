@@ -7,10 +7,6 @@ const AllClothesScreen = ({ navigation }) => {
         <ScrollView style={styles.container}>
             <View style={styles.screenTitleContainer}>
                 <Text style={styles.screenTitle}>所有商品</Text>
-                {/* <Button
-                    title='naviagte'
-                    onPress={() => navigation.navigate('ProductDetail')}
-                /> */}
             </View>
             <CardsLayout title='熱門商品' onPressCard={() => navigation.navigate('ProductDetail')} />
             <CardsLayout title='限時優惠' />

@@ -37,6 +37,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wasa/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wasa/main.m; sourceTree = "<group>"; };
 		6D02B459624ED958FE9851B4 /* libPods-wasa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		776263E9C2D549E69062A467 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = wasa/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8260DCDAA5696A5BE9CBB5EC /* Pods-wasa-wasaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wasa-wasaTests.release.xcconfig"; path = "Target Support Files/Pods-wasa-wasaTests/Pods-wasa-wasaTests.release.xcconfig"; sourceTree = "<group>"; };
 		8D05FF8861FD8A81301DFAF6 /* libPods-wasa-wasaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wasa-wasaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6CC38816CE404A13A083294C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				776263E9C2D549E69062A467 /* Ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +131,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				EA2273B9A127BAA3B484487E /* Pods */,
+				6CC38816CE404A13A083294C /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,7 +155,6 @@
 				F74814E425FA4EA5BE0488D0 /* Pods-wasa-wasaTests.debug.xcconfig */,
 				8260DCDAA5696A5BE9CBB5EC /* Pods-wasa-wasaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text, ScrollView, Button } from "react-native";
+import { StyleSheet, View, Text, ScrollView } from "react-native";
 import Card from "../common/Card";
 
 const CardsLayout = ({ title, onPressCard }) => {
@@ -14,10 +14,10 @@ const CardsLayout = ({ title, onPressCard }) => {
                 showsHorizontalScrollIndicator={false}
                 alwaysBounceHorizontal={false}>
                 <Card onPress={onPressCard} />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card onPress={onPressCard} />
+                <Card onPress={onPressCard} />
+                <Card onPress={onPressCard} />
+                <Card onPress={onPressCard} />
             </ScrollView>
         </View>
     )
