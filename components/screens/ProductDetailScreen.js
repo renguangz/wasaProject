@@ -12,7 +12,7 @@ const ProductDetailScreen = ({ navigation, productDetail }) => {
             <View style={styles.imageBackgroundContainer}>
                 <ImageBackground
                     source={{ uri: productDetail.imageUri }}
-                    style={styles.imageBackground}
+                    style={{ flex: 1 }}
                 >
                     <TouchableWithoutFeedback
                         onPress={() => navigation.pop()}
@@ -68,10 +68,6 @@ const styles = StyleSheet.create({
     imageBackgroundContainer: {
         // backgroundColor: 'orange',
         height: '50%',
-    },
-    imageBackground: {
-        // height: '50%',
-        flex: 1,
     },
     backgroundImage: {
         flex: 1,

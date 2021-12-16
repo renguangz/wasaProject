@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Button, Text, View } from 'react-native';
+import { Button, View } from 'react-native';
+import CardListCard from '../common/CartListCard';
 
 const CartScreen = ({navigation}) => {
     useEffect(() => {
@@ -10,11 +11,11 @@ const CartScreen = ({navigation}) => {
     }, [])
     return (
         <View>
-            <Button 
+            {/* <Button 
                 title='navigate'
                 onPress={() => navigation.navigate('ProductDetail')}
-            />
-            <Text>帳戶</Text>
+            /> */}
+            <CardListCard />
         </View>
     )
 };
