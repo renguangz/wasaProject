@@ -1,9 +1,9 @@
 import React from "react";
-import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, Image, ImageBackground } from "react-native";
+import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
 import { connect } from 'react-redux';
+import { Colors } from "../constants/colors";
 
 const ProductDetailScreen = ({ navigation, productDetail }) => {
-    console.log(productDetail)
     if (!productDetail) {
         return null
     }
@@ -26,22 +26,39 @@ const ProductDetailScreen = ({ navigation, productDetail }) => {
                     <Text style={styles.descriptionTitle}>{productDetail.imageTitle}</Text>
                 </View>
                 <View style={styles.priceContainer}>
-                    <Text>${productDetail.cost}</Text>
+                    <Text style={styles.price}>${productDetail.cost}</Text>
                 </View>
                 <View style={styles.commentContainer}>
                     <Text>尚無評價</Text>
                 </View>
             </View>
             <View style={styles.sellerContainer}>
-                <View style={styles.sellerNameContainer}>
-                    <Text>商家名稱{productDetail.seller.name}</Text>
+                <View style={styles.sellerInfoContainer}>
+                    <View style={styles.sellerPicture}></View>
+                    <View style={styles.sellerNameContainer}>
+                        <Text style={styles.sellerName}>{productDetail.seller.name}</Text>
+                        <Text style={styles.sellerTime}>1小時前上線</Text>
+                    </View>
                 </View>
                 <View style={styles.sellerInfo}>
-                    <Text>商品數量{productDetail.seller.sell_quantity}，店家評價{productDetail.seller.rates}</Text>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={styles.sellerInfoText}>商品: </Text>
+                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail.seller.sell_quantity}</Text>
+                    </View>
+                    <Text style={styles.sellerInfoText}>|</Text>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={styles.sellerInfoText}>店家評價: </Text>
+                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail.seller.rates}</Text>
+                    </View>
                 </View>
             </View>
             <View style={styles.actionContainer}>
-                <Text>加入購物車等等</Text>
+                <TouchableOpacity style={styles.pressButton}>
+                    <Text style={styles.buttonText}>加入購物車</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={{...styles.pressButton, backgroundColor: Colors.primaryFont}}>
+                    <Text style={styles.buttonText}>直接購買</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )
@@ -63,48 +80,96 @@ const styles = StyleSheet.create({
         // resizeMode: 'cover',
     },
     descriptionContainer: {
-        backgroundColor: 'pink',
+        backgroundColor: 'white',
         height: '16%',
         paddingHorizontal: 12,
     },
     descriptionTitleContainer: {
-        backgroundColor: 'green',
-        height: '36%',
-        justifyContent: 'center',
-    },
-    descriptionTitle: {
-        fontSize: 16,
-        fontWeight: '300',
-    },
-    priceContainer: {
-        backgroundColor: 'steelblue',
+        // backgroundColor: 'green',
         height: '40%',
         justifyContent: 'center',
     },
+    descriptionTitle: {
+        fontSize: 20,
+        fontWeight: '300',
+    },
+    priceContainer: {
+        // backgroundColor: 'steelblue',
+        height: '40%',
+        justifyContent: 'center',
+    },
+    price: {
+        fontSize: 24,
+        color: Colors.primaryFont
+    },
     commentContainer: {
-        backgroundColor: 'yellow',
-        height: '24%',
+        // backgroundColor: 'yellow',
+        height: '20%',
         justifyContent: 'center',
     },
     sellerContainer: {
-        backgroundColor: 'green',
+        backgroundColor: 'white',
         height: '22%',
         marginTop: 16,
         paddingHorizontal: 12,
     },
-    sellerNameContainer: {
-        backgroundColor: 'pink',
+    sellerInfoContainer: {
+        // backgroundColor: 'pink',
+        marginHorizontal: 60,
         height: '60%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        // justifyContent: 'space-around',
+    },
+    sellerPicture: {
+        backgroundColor: 'grey',
+        height: 88,
+        width: 88,
+        borderRadius: 88,
+        borderWidth: 4,
+        borderColor: Colors.cardsColor,
+    },
+    sellerNameContainer: {
+        // backgroundColor: 'green',
+        flex: 1,
+        marginLeft: 16,
+    },
+    sellerName: {
+        fontSize: 20,
+        marginBottom: 8,
+    },
+    sellerTime: {
+        fontSize: 16,
+        color: Colors.secondaryFont
     },
     sellerInfo: {
-        backgroundColor: 'orange',
+        // backgroundColor: 'orange',
         height: '40%',
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    sellerInfoText: {
+        fontSize: 22,
+        color: Colors.secondaryFont,
     },
     actionContainer: {
-        backgroundColor: 'steelblue',
+        // backgroundColor: 'steelblue',
         height: '8%',
         marginTop: 16,
+        flexDirection: 'row',
+        paddingHorizontal: 12,
+    },
+    pressButton: {
+        backgroundColor: 'green',
+        flex: 1,
+        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    buttonText: {
+        fontSize: 20,
+        color: 'white',
     }
 });
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { Colors } from "../constants/colors";
 
 const Card = ({ onPress, uri, productTitle, price }) => {
     return (
@@ -25,7 +26,7 @@ const Card = ({ onPress, uri, productTitle, price }) => {
 const styles = StyleSheet.create({
     cardContainer: {
         // backgroundColor: 'green',
-        borderColor: '#F7F7F7',
+        borderColor: Colors.cardsColor,
         borderWidth: 2,
         height: 208,
         width: 160,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
         height: '80%',
     },
     productInfoContainer: {
-        backgroundColor: '#F7F7F7',
+        backgroundColor: Colors.cardsColor,
         height: '20%',
         flexDirection: 'row',
         justifyContent: 'space-between',
