@@ -54,7 +54,7 @@ const ProductDetailScreen = ({ navigation, productDetail }) => {
             </View>
             <View style={styles.actionContainer}>
                 <TouchableOpacity style={styles.pressButton}>
-                    <Text style={styles.buttonText}>加入購物車</Text>
+                    <Text style={styles.buttonText}>{productDetail ? '已加入購物車' : '加入購物車'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{...styles.pressButton, backgroundColor: Colors.primaryFont}}>
                     <Text style={styles.buttonText}>直接購買</Text>
