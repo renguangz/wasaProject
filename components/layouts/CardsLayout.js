@@ -1,8 +1,8 @@
 import React from "react";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import { StyleSheet, View, Text, ScrollView, Button } from "react-native";
 import Card from "../common/Card";
 
-const CardsLayout = ({ title, navigation }) => {
+const CardsLayout = ({ title, onPressCard }) => {
     return (
         <View style={styles.blockContainer}>
             <View style={styles.titleContainer}>
@@ -13,7 +13,7 @@ const CardsLayout = ({ title, navigation }) => {
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 alwaysBounceHorizontal={false}>
-                <Card onPress={() => navigation.navigate('ProductDetail')} />
+                <Card onPress={onPressCard} />
                 <Card />
                 <Card />
                 <Card />

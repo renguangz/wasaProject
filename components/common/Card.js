@@ -1,11 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const Card = () => {
+const Card = ({ onPress }) => {
     return (
-        <View style={styles.cardContainer}>
-            <Text>Card</Text>
-        </View>
+        <TouchableOpacity
+            onPress={onPress}
+        >
+            <View style={styles.cardContainer}>
+                <Text>Card</Text>
+            </View>
+        </TouchableOpacity>
     )
 };
 
