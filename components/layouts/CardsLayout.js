@@ -1,24 +1,43 @@
-import React from "react";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import React, { useEffect, useState } from "react";
+import { StyleSheet, View, Text, ScrollView, FlatList } from "react-native";
 import Card from "../common/Card";
+import { connect } from 'react-redux';
+import { fetchClothes } from "../redux/clothes/clothesActions";
+import { handlePressProduct } from "../redux";
 
-const CardsLayout = ({ title, onPressCard }) => {
+const CardsLayout = ({ title, onPressCard, clothes, fetchClothes, handlePressProduct }) => {
+    useEffect(() => {
+        fetchClothes()
+    }, [])
+
+    const [productDetail, setProductDetail] = useState();
+    const handlePress = (item) => {
+        onPressCard();
+        setProductDetail(item) // 取得點擊的資訊
+    }
+    useEffect(() => {
+        handlePressProduct(productDetail)
+    }, [productDetail])
+
     return (
         <View style={styles.blockContainer}>
             <View style={styles.titleContainer}>
                 <Text style={styles.title}>{title}</Text>
             </View>
-            <ScrollView
-                style={styles.cardContainer}
+            <FlatList
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                alwaysBounceHorizontal={false}>
-                <Card onPress={onPressCard} />
-                <Card onPress={onPressCard} />
-                <Card onPress={onPressCard} />
-                <Card onPress={onPressCard} />
-                <Card onPress={onPressCard} />
-            </ScrollView>
+                data={clothes}
+                keyExtractor={(item, index) => `key-${index}`}
+                renderItem={({ item }) => (
+                    <Card
+                        onPress={() => handlePress(item)}
+                        uri={item.imageUri}
+                        productTitle={item.imageTitle}
+                        price={item.cost}
+                    />
+                )}
+            />
         </View>
     )
 };
@@ -43,4 +62,17 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CardsLayout;
+const mapStateToProps = state => {
+    return {
+        clothes: state.clothes.clothes,
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchClothes: () => dispatch(fetchClothes()),
+        handlePressProduct: (data) => dispatch(handlePressProduct(data))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardsLayout);
