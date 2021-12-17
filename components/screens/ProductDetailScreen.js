@@ -3,12 +3,11 @@ import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBa
 import { connect } from 'react-redux';
 import { Colors } from "../constants/colors";
 import { updateClothes } from "../redux";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
-    console.log(productDetail)
     const [isLiked, setIsLiked] = useState(productDetail && productDetail.like);
     const handlePressCart = () => {
-        console.log('productDetail.like', productDetail.like)
         updateClothes(productDetail.key, isLiked)
         setIsLiked(!isLiked)
     }
@@ -17,7 +16,7 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
         return null
     }
     return (
-        <SafeAreaView style={{ backgroundColor: '#EFEFEF', flex: 1 }}>
+        <View style={{ backgroundColor: '#EFEFEF', flex: 1 }}>
             <View style={styles.imageBackgroundContainer}>
                 <ImageBackground
                     source={{ uri: productDetail.imageUri }}
@@ -26,7 +25,14 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
                     <TouchableWithoutFeedback
                         onPress={() => navigation.pop()}
                     >
-                        <Text style={{ color: 'steelblue' }}>返回</Text>
+                        <SafeAreaView>
+                            <Icon
+                                name={'arrow-back-circle'}
+                                // name="arrow-back-circle-outline"
+                                brand
+                                style={{ fontSize: 52, color: 'steelblue', marginLeft: 12 }}
+                            />
+                        </SafeAreaView>
                     </TouchableWithoutFeedback>
                 </ImageBackground>
             </View>
@@ -72,7 +78,7 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
                     <Text style={styles.buttonText}>直接購買</Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </View>
     )
 };
 
@@ -163,7 +169,7 @@ const styles = StyleSheet.create({
     },
     actionContainer: {
         // backgroundColor: 'steelblue',
-        height: '8%',
+        height: '9%',
         marginTop: 16,
         flexDirection: 'row',
     },
