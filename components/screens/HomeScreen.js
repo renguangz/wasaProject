@@ -6,10 +6,11 @@ import GirlClothesScreen from './GirlClothesScreen';
 
 const Drawer = createDrawerNavigator();
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+    console.log(navigation)
     return (
         <Drawer.Navigator >
-            <Drawer.Screen name='All Clothes' component={AllClothesScreen} />
+            <Drawer.Screen name='All Clothes' component={AllClothesScreen} options={{ headerShown: false }} />
             <Drawer.Screen name='Boys Clothes' component={BoyClothesScreen} />
             <Drawer.Screen name='Girls Clothes' component={GirlClothesScreen} />
         </Drawer.Navigator>
