@@ -7,15 +7,12 @@ import { DrawerActions } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 
-const MainScreen = ({ navigation }) => {
+const MainScreen = () => {
     return (
         <Tab.Navigator initialRouteName='帳戶'>
             <Tab.Screen name='Home'
                 component={HomeScreen}
-                options={{
-                    headerTitle: () => <Header onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())} />,
-                    headerTitleContainerStyle: { width: '100%' },
-                }}
+                options={{ headerShown: false }}
             />
             <Tab.Screen name='購物車' component={CartScreen} />
         </Tab.Navigator>

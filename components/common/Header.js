@@ -1,22 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const Header = ({ onPress }) => {
+const Header = () => {
     return (
         <View style={styles.headerContainer}>
-            <View style={styles.btnContainer}>
-                <TouchableOpacity onPress={onPress}>
-                    <Text>
-                        Button
-                    </Text>
-                </TouchableOpacity>
-            </View>
             <View style={styles.logoContainer}>
                 <Text style={{ fontSize: 20, fontWeight: '600' }}>
                     Header
                 </Text>
             </View>
-            <View style={{ flex: 1 }}></View>
         </View>
     )
 };
