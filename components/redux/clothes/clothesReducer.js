@@ -18,6 +18,18 @@ const clothesReducer = (state = initialState, action) => {
                 loading: false,
                 error: action.payload
             }
+        case 'UPDATE_CLOTHES':
+            console.log('redux', action.payload.key, state)
+            return {
+                ...state,
+                clothes: state.clothes.map(item => {
+                    if (item.key != action.payload.key) {
+                        return item;
+                    } else {
+                        return { ...item, like: item.payload }
+                    }
+                })
+            }
         default: return state
     }
 };

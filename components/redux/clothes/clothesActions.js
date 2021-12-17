@@ -13,7 +13,7 @@ export const fetchClothesFailure = error => {
 };
 
 export const fetchClothes = () => dispatch => {
-    fetch('https://mocki.io/v1/f9a6a365-f490-4efa-9dd0-5ddbfce237a1', {
+    fetch('https://mocki.io/v1/38cafb81-e2c0-43ec-b7c7-b7757d298bb6', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -24,4 +24,14 @@ export const fetchClothes = () => dispatch => {
     }).catch(err => {
         dispatch(fetchClothesFailure(err))
     })
+};
+
+export const upDateClothes = (key, is_like) => {
+    return {
+        type: 'UPDATE_CLOTHES',
+        payload: {
+            key,
+            is_like
+        }
+    }
 }
