@@ -19,7 +19,6 @@ const clothesReducer = (state = initialState, action) => {
                 error: action.payload
             }
         case 'UPDATE_CLOTHES':
-            console.log('redux', action.payload.key, state)
             return {
                 ...state,
                 clothes: state.clothes.map(item => {
