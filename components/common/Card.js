@@ -15,8 +15,10 @@ const Card = ({ onPress, uri, productTitle, price }) => {
                     />
                 </View>
                 <View style={styles.productInfoContainer}>
-                    <Text>{productTitle}</Text>
-                    <Text>{price}</Text>
+                    <View style={styles.productInfoTitle}>
+                        <Text numberOfLines={1} style={styles.productText}>{productTitle}</Text>
+                    </View>
+                    <Text style={{...styles.productText, color: Colors.primaryFont}}>{price}</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -42,6 +44,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    productInfoTitle: {
+        // backgroundColor: 'yellow',
+        flex: 1,
+        paddingRight: 8,
+    },
+    productText: {
+        fontSize: 16,
+        fontWeight: '400',
     },
 })
 

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
 import { connect } from 'react-redux';
 import { Colors } from "../constants/colors";
+import { updateClothes } from "../redux";
 
-const ProductDetailScreen = ({ navigation, productDetail }) => {
+const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
+    console.log(productDetail)
+    const [isLiked, setIsLiked] = useState(productDetail && productDetail.like);
+    const handlePressCart = () => {
+        console.log('productDetail.like', productDetail.like)
+        updateClothes(productDetail.key, isLiked)
+        setIsLiked(!isLiked)
+    }
+
     if (!productDetail) {
         return null
     }
@@ -23,40 +32,43 @@ const ProductDetailScreen = ({ navigation, productDetail }) => {
             </View>
             <View style={styles.descriptionContainer}>
                 <View style={styles.descriptionTitleContainer}>
-                    <Text style={styles.descriptionTitle}>{productDetail.imageTitle}</Text>
+                    <Text
+                        style={styles.descriptionTitle}
+                        numberOfLines={2}
+                    >{productDetail.imageTitle}</Text>
                 </View>
                 <View style={styles.priceContainer}>
                     <Text style={styles.price}>${productDetail.cost}</Text>
                 </View>
                 <View style={styles.commentContainer}>
-                    <Text>尚無評價</Text>
+                    <Text style={{ color: Colors.secondaryFont }}>尚無評價</Text>
                 </View>
             </View>
             <View style={styles.sellerContainer}>
                 <View style={styles.sellerInfoContainer}>
                     <View style={styles.sellerPicture}></View>
                     <View style={styles.sellerNameContainer}>
-                        <Text style={styles.sellerName}>{productDetail.seller.name}</Text>
+                        <Text style={styles.sellerName}>{productDetail && productDetail.seller && productDetail.seller.name}</Text>
                         <Text style={styles.sellerTime}>1小時前上線</Text>
                     </View>
                 </View>
                 <View style={styles.sellerInfo}>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={styles.sellerInfoText}>商品: </Text>
-                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail.seller.sell_quantity}</Text>
+                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail && productDetail.seller && productDetail.seller.sell_quantity}</Text>
                     </View>
                     <Text style={styles.sellerInfoText}>|</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={styles.sellerInfoText}>店家評價: </Text>
-                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail.seller.rates}</Text>
+                        <Text style={{ ...styles.sellerInfoText, color: Colors.primaryFont }}>{productDetail && productDetail.seller && productDetail.seller.rates}</Text>
                     </View>
                 </View>
             </View>
             <View style={styles.actionContainer}>
-                <TouchableOpacity style={styles.pressButton}>
-                    <Text style={styles.buttonText}>{productDetail ? '已加入購物車' : '加入購物車'}</Text>
+                <TouchableOpacity style={styles.pressButton} onPress={handlePressCart}>
+                    <Text style={styles.buttonText}>{isLiked ? '已加入購物車' : '加入購物車'}</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={{...styles.pressButton, backgroundColor: Colors.primaryFont}}>
+                <TouchableOpacity style={{ ...styles.pressButton, backgroundColor: Colors.primaryFont }}>
                     <Text style={styles.buttonText}>直接購買</Text>
                 </TouchableOpacity>
             </View>
@@ -87,7 +99,7 @@ const styles = StyleSheet.create({
     },
     descriptionTitle: {
         fontSize: 20,
-        fontWeight: '300',
+        fontWeight: '400',
     },
     priceContainer: {
         // backgroundColor: 'steelblue',
@@ -154,7 +166,6 @@ const styles = StyleSheet.create({
         height: '8%',
         marginTop: 16,
         flexDirection: 'row',
-        paddingHorizontal: 12,
     },
     pressButton: {
         backgroundColor: 'green',
@@ -175,4 +186,10 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps,)(ProductDetailScreen);
+const mapDispatchToProps = dispatch => {
+    return {
+        updateClothes: (key, data) => dispatch(updateClothes(key, data))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetailScreen);

@@ -7,10 +7,10 @@ const CardListCard = ({ onPressCard, sellerName, productTitle, price, imageUri }
         <TouchableWithoutFeedback onPress={onPressCard}>
             <View style={styles.container}>
                 <View style={styles.productInfoContainer}>
-                    <Text style={{ color: Colors.secondaryFont }}>賣家: {sellerName}</Text>
-                    <Text style={styles.productText}>{productTitle}</Text>
-                    <Text style={{ ...styles.productText, color: Colors.primaryFont }}>{price}</Text>
-                    <Text style={{ color: Colors.secondaryFont }}>尚無評價</Text>
+                    <Text numberOfLines={1} style={{ color: Colors.secondaryFont }}>賣家: {sellerName}</Text>
+                    <Text numberOfLines={1} style={styles.productText}>{productTitle}</Text>
+                    <Text numberOfLines={1} style={{ ...styles.productText, color: Colors.primaryFont }}>{price}</Text>
+                    <Text numberOfLines={1} style={{ color: Colors.secondaryFont }}>尚無評價</Text>
                 </View>
                 <View style={styles.productImageContainer}>
                     <Image
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         paddingVertical: 12,
+        paddingRight: 20,
         justifyContent: 'space-between',
     },
     productText: {
