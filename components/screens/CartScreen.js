@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CardListCard from '../common/CartListCard';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { connect } from 'react-redux';
-import { handlePressProduct, upDateClothes } from '../redux';
+import { handlePressProduct, updateClothes } from '../redux';
 
 const CartScreen = ({ navigation, clothes, handlePressProduct, updateClothes }) => {
     const cartData = clothes.filter(item => item.like)
@@ -90,7 +90,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         handlePressProduct: (data) => dispatch(handlePressProduct(data)),
-        updateClothes: (key, data) => dispatch(upDateClothes(key, data))
+        updateClothes: (key, data) => dispatch(updateClothes(key, data))
     }
 }
 

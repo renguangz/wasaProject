@@ -26,7 +26,7 @@ export const fetchClothes = () => dispatch => {
     })
 };
 
-export const upDateClothes = (key, is_like) => {
+export const updateClothes = (key, is_like) => {
     return {
         type: 'UPDATE_CLOTHES',
         payload: {
