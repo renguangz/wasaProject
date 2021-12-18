@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { StyleSheet, View, Text, ScrollView, FlatList } from "react-native";
+import React, { useEffect } from "react";
+import { StyleSheet, View, Text, FlatList } from "react-native";
 import Card from "../common/Card";
 import { connect } from 'react-redux';
-import { handlePressProduct, fetchClothes } from "../redux";
+import { fetchClothes, getProduct } from "../redux";
 
-const CardsLayout = ({ title, onPressCard, clothes, fetchClothes, handlePressProduct, data }) => {
+const CardsLayout = ({ title, onPressCard, fetchClothes, data, getProduct }) => {
     useEffect(() => {
         fetchClothes()
     }, [])
 
-    const [productDetail, setProductDetail] = useState();
     const handlePress = (item) => {
         onPressCard();
-        setProductDetail(item) // 取得點擊的資訊
+        getProduct(item)
     }
-    useEffect(() => {
-        handlePressProduct(productDetail)
-    }, [productDetail])
 
     return (
         <View style={styles.blockContainer}>
@@ -70,7 +66,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchClothes: () => dispatch(fetchClothes()),
-        handlePressProduct: (data) => dispatch(handlePressProduct(data))
+        getProduct: (data) => dispatch(getProduct(data)),
     }
 }
 

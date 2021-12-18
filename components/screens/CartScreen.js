@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CardListCard from '../common/CartListCard';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { connect } from 'react-redux';
-import { handlePressProduct, updateClothes } from '../redux';
+import {  getProduct, updateClothes } from '../redux';
 
-const CartScreen = ({ navigation, clothes, handlePressProduct, updateClothes }) => {
+const CartScreen = ({ navigation, clothes,updateClothes, getProduct }) => {
     const cartData = clothes.filter(item => item.like)
 
-    const [productDetail, setProductDetail] = useState([]);
     const handlePress = item => {
         navigation.navigate('ProductDetail')
-        setProductDetail(item);
+        getProduct(item)
     }
-
-    useEffect(() => {
-        handlePressProduct(productDetail)
-    }, [productDetail])
 
     const renderHiddenItem = (data, rowMap) => {
         return (
@@ -89,8 +84,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handlePressProduct: (data) => dispatch(handlePressProduct(data)),
-        updateClothes: (key, data) => dispatch(updateClothes(key, data))
+        updateClothes: (key, data) => dispatch(updateClothes(key, data)),
+        getProduct: (data) => dispatch(getProduct(data))
     }
 }
 

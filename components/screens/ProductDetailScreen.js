@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBackground, TouchableOpacity, Image } from "react-native";
 import { connect } from 'react-redux';
 import { Colors } from "../constants/colors";
-import { updateClothes } from "../redux";
+import { getProduct, updateClothes } from "../redux";
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const ProductDetailScreen = ({ navigation, productDetail, updateClothes, clothes }) => {
+const ProductDetailScreen = ({ navigation, productDetail, updateClothes, clothes, getProduct }) => {
     const handlePressCart = (item) => {
-        console.log('this one: ', productDetail.like, 'others', console.log(productDetail.key))
-        // console.log(item)
         updateClothes(productDetail.key, item)
     }
 
@@ -192,12 +190,13 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
     return {
         clothes: state.clothes.clothes,
-        productDetail: state.productDetail.info
+        productDetail: state.clothes.product
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        getProduct: (product) => dispatch(getProduct(product)),
         updateClothes: (key, data) => dispatch(updateClothes(key, data))
     }
 }
