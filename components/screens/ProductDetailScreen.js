@@ -5,11 +5,11 @@ import { Colors } from "../constants/colors";
 import { updateClothes } from "../redux";
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
-    const [isLiked, setIsLiked] = useState(productDetail && productDetail.like);
+const ProductDetailScreen = ({ navigation, productDetail, updateClothes, clothes }) => {
     const handlePressCart = (item) => {
+        console.log('this one: ', productDetail.like, 'others', console.log(productDetail.key))
+        // console.log(item)
         updateClothes(productDetail.key, item)
-        setIsLiked(!isLiked)
     }
 
     if (!productDetail) {
@@ -30,7 +30,7 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
                                 name={'arrow-back-circle'}
                                 // name="arrow-back-circle-outline"
                                 brand
-                                style={{ fontSize: 52, color: 'steelblue', marginLeft: 12 }}
+                                style={{ fontSize: 52, color: Colors.primaryFont, marginLeft: 12 }}
                             />
                         </SafeAreaView>
                     </TouchableWithoutFeedback>
@@ -74,8 +74,8 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
                 </View>
             </View>
             <View style={styles.actionContainer}>
-                <TouchableOpacity style={styles.pressButton} onPress={() => handlePressCart(!isLiked)}>
-                    <Text style={styles.buttonText}>{isLiked ? '已加入購物車' : '加入購物車'}</Text>
+                <TouchableOpacity style={styles.pressButton} onPress={() => handlePressCart(!productDetail.like)}>
+                    <Text style={styles.buttonText}>{productDetail.like ? '已加入購物車' : '加入購物車'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{ ...styles.pressButton, backgroundColor: Colors.primaryFont }}>
                     <Text style={styles.buttonText}>直接購買</Text>
@@ -191,6 +191,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = state => {
     return {
+        clothes: state.clothes.clothes,
         productDetail: state.productDetail.info
     }
 };
