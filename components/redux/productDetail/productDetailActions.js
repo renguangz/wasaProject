@@ -1,7 +1,7 @@
 // get click data
-export const handlePressProduct = product => {
+export const getProductDetail = product => {
     return {
-        type: 'HANDLE_PRESS_PRODUCT',
+        type: 'FGET_PRODUCT_DETAIL',
         payload: product
     }
 };

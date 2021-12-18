@@ -4,7 +4,7 @@ const initialState = {
 
 const productDetailReducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'HANDLE_PRESS_PRODUCT':
+        case 'GET_PRODUCT_DETAIL':
             return {
                 ...state,
                 info: action.payload
