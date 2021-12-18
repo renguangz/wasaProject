@@ -3,6 +3,7 @@ import React from 'react';
 import CartScreen from './CartScreen';
 import HomeScreen from '../screens/HomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Colors } from '../constants/colors';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +23,7 @@ const MainScreen = () => {
 
                     return <Ionicons name={iconName} size={size} color={color} />;
                 },
-                tabBarActiveTintColor: 'tomato',
+                tabBarActiveTintColor: Colors.primaryFont,
                 tabBarInactiveTintColor: 'gray',
             })}
         >

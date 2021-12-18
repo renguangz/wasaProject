@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBackground, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { TouchableWithoutFeedback, SafeAreaView, Text, View, StyleSheet, ImageBackground, TouchableOpacity, Image } from "react-native";
 import { connect } from 'react-redux';
 import { Colors } from "../constants/colors";
 import { updateClothes } from "../redux";
@@ -7,8 +7,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
     const [isLiked, setIsLiked] = useState(productDetail && productDetail.like);
-    const handlePressCart = () => {
-        updateClothes(productDetail.key, isLiked)
+    const handlePressCart = (item) => {
+        updateClothes(productDetail.key, item)
         setIsLiked(!isLiked)
     }
 
@@ -52,7 +52,10 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
             </View>
             <View style={styles.sellerContainer}>
                 <View style={styles.sellerInfoContainer}>
-                    <View style={styles.sellerPicture}></View>
+                    <Image
+                        source={{ uri: productDetail && productDetail.seller && productDetail.seller.seller_image }}
+                        style={styles.sellerPicture}
+                    />
                     <View style={styles.sellerNameContainer}>
                         <Text style={styles.sellerName}>{productDetail && productDetail.seller && productDetail.seller.name}</Text>
                         <Text style={styles.sellerTime}>1小時前上線</Text>
@@ -71,7 +74,7 @@ const ProductDetailScreen = ({ navigation, productDetail, updateClothes }) => {
                 </View>
             </View>
             <View style={styles.actionContainer}>
-                <TouchableOpacity style={styles.pressButton} onPress={handlePressCart}>
+                <TouchableOpacity style={styles.pressButton} onPress={() => handlePressCart(!isLiked)}>
                     <Text style={styles.buttonText}>{isLiked ? '已加入購物車' : '加入購物車'}</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={{ ...styles.pressButton, backgroundColor: Colors.primaryFont }}>
@@ -136,7 +139,7 @@ const styles = StyleSheet.create({
         // justifyContent: 'space-around',
     },
     sellerPicture: {
-        backgroundColor: 'grey',
+        // backgroundColor: 'grey',
         height: 88,
         width: 88,
         borderRadius: 88,

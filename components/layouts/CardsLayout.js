@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, ScrollView, FlatList } from "react-native";
 import Card from "../common/Card";
 import { connect } from 'react-redux';
-import { fetchClothes } from "../redux/clothes/clothesActions";
-import { handlePressProduct } from "../redux";
+import { handlePressProduct, fetchClothes } from "../redux";
 
-const CardsLayout = ({ title, onPressCard, clothes, fetchClothes, handlePressProduct }) => {
+const CardsLayout = ({ title, onPressCard, clothes, fetchClothes, handlePressProduct, data }) => {
     useEffect(() => {
         fetchClothes()
     }, [])
@@ -27,7 +26,7 @@ const CardsLayout = ({ title, onPressCard, clothes, fetchClothes, handlePressPro
             <FlatList
                 horizontal
                 showsHorizontalScrollIndicator={false}
-                data={clothes}
+                data={data}
                 keyExtractor={(item, index) => `key-${index}`}
                 renderItem={({ item }) => (
                     <Card

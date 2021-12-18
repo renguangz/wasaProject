@@ -1,12 +1,25 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { connect } from 'react-redux';
+import ClothesScreenLayouts from "../layouts/ClothesScreenLayouts";
 
-const GirlClothesScreen = () => {
+const GirlClothesScreen = ({ clothes, navigation }) => {
+    const girlClothes = clothes && clothes.filter(item => item.tag === 'female')
+    if (!clothes) {
+        return null
+    }
     return (
-        <View>
-            <Text>GirlClothesScreen</Text>
-        </View>
+        <ClothesScreenLayouts
+            screenTitle='女生服飾'
+            onPressCard={() => navigation.navigate('ProductDetail')}
+            data={girlClothes}
+        />
     )
 };
 
-export default GirlClothesScreen;
+const mapStateToProps = state => {
+    return {
+        clothes: state.clothes.clothes,
+    }
+};
+
+export default connect(mapStateToProps,)(GirlClothesScreen);
