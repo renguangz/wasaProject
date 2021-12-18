@@ -22,10 +22,11 @@ const clothesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 clothes: state.clothes.map(item => {
+                    console.log('keys:', item.key, action.payload.key, item.like)
                     if (item.key != action.payload.key) {
                         return item;
                     } else {
-                        return { ...item, like: item.payload }
+                        return { ...item, like: action.payload.is_like }
                     }
                 })
             }
