@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     pressButton: {
-        backgroundColor: 'green',
+        backgroundColor: '#595757',
         flex: 1,
         height: '100%',
         alignItems: 'center',

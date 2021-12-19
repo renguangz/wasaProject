@@ -1,5 +1,5 @@
 export const Colors = {
-    primaryFont: '#B95CFF',
+    primaryFont: '#677743',
     secondaryFont: '#858585',
     cardsColor: '#F7F7F7',
 }

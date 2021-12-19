@@ -4,6 +4,7 @@ import Header from '../common/Header';
 import AllClothesScreen from './AllClothesScreen';
 import BoyClothesScreen from './BoyClothesScreen';
 import GirlClothesScreen from './GirlClothesScreen';
+import { Colors } from '../constants/colors';
 
 const Drawer = createDrawerNavigator();
 
@@ -11,9 +12,13 @@ const HomeScreen = () => {
     const options = {
         headerTitle: () => <Header />,
         headerTitleContainerStyle: { width: '100%' },
+        drawerActiveBackgroundColor: Colors.primaryFont,
+        drawerActiveTintColor: "white",
     }
     return (
-        <Drawer.Navigator>
+        <Drawer.Navigator
+            screenOptions={{ headerTintColor: Colors.primaryFont }}
+        >
             <Drawer.Screen
                 name='All Clothes'
                 component={AllClothesScreen}

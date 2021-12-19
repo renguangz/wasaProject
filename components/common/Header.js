@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Colors } from '../constants/colors';
 
 const Header = () => {
     return (
         <View style={styles.headerContainer}>
             <View style={styles.logoContainer}>
-                <Text style={{ fontSize: 20, fontWeight: '600' }}>
-                    Header
+                <Text style={{ fontSize: 20, fontWeight: '600', color: Colors.primaryFont }}>
+                    山葵組 WasaTeam
                 </Text>
             </View>
         </View>
