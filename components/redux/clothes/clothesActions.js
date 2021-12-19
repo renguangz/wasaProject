@@ -13,7 +13,7 @@ export const fetchClothesFailure = error => {
 };
 
 export const fetchClothes = () => dispatch => {
-    fetch('https://mocki.io/v1/ad11ba81-21bb-4bf3-ac5b-509435abce56', {
+    fetch('https://mocki.io/v1/50eabb82-d5cd-46e7-b330-dbf7f70b10d1', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
