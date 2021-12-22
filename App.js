@@ -9,10 +9,10 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import MainScreen from './components/screens/MainScreen';
-import ProductDetailScreen from './components/screens/ProductDetailScreen';
+import MainScreen from './src/screens/MainScreen';
+import ProductDetailScreen from './src/screens/ProductDetailScreen';
 import { Provider } from 'react-redux';
-import store from './components/redux/store';
+import store from './src/redux/store';
 
 const Stack = createNativeStackNavigator();
 

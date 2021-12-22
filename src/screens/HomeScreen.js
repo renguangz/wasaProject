@@ -1,6 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import React from 'react';
-import Header from '../common/Header';
+import Header from '../components/Header';
 import AllClothesScreen from './AllClothesScreen';
 import BoyClothesScreen from './BoyClothesScreen';
 import GirlClothesScreen from './GirlClothesScreen';

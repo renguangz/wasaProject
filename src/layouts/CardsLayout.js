@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { StyleSheet, View, Text, FlatList } from "react-native";
-import Card from "../common/Card";
+import Card from "../components/Card";
 import { connect } from 'react-redux';
 import { fetchClothes, getProduct } from "../redux";
 

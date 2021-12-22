@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import CardListCard from '../common/CartListCard';
+import CardListCard from '../components/CartListCard';
 import { SwipeListView } from 'react-native-swipe-list-view';
 import { connect } from 'react-redux';
 import {  getProduct, updateClothes } from '../redux';
